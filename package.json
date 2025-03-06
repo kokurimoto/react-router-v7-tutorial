@@ -8,7 +8,10 @@
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
     "biome:check:write": "npx biome check --write",
-    "test": "vitest"
+    "test": "vitest",
+    "ci:check": "npx biome ci",
+    "ci:build": "npx env-cmd -f .env.example npm run build",
+    "ci:test": "npm run test"
   },
   "dependencies": {
     "@react-router/node": "^7.2.0",
